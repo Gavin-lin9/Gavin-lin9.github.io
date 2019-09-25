@@ -5,6 +5,7 @@
     $pw = $_GET['password'];
 
     echo $user;
+    exit();
     // include "./03_conn.php";
     // //  1. 检查用户名是否存在
     // $sql = "
