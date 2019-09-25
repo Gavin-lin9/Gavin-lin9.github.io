@@ -27,7 +27,7 @@
         if($ret) {
             //注册成功
             // echo "注册成功";
-            header("Location: http://localhost/site1/html/login.html");
+            header("Location: www.gavinlin9.cluGavin-lin9.github.io/html/login.html");
         } else {
             //注册失败
             echo "注册失败";
