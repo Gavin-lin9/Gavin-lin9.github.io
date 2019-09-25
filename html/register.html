@@ -23,7 +23,7 @@
 
     //`/Gavin-lin9.github.io/api/checkuser.php?username=${user}`
 
-    xhr.open('GET', `../api/register.php?username=${user}&&password=${password}`, true);
+    xhr.open('GET', `../api/register.php?username=${user}`, true);
 
     xhr.onload = function () {
       if (this.status >= 200 && this.status < 300) {
