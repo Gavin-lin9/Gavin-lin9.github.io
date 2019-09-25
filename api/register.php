@@ -1,12 +1,11 @@
 <?php
     // echo "注册成功";
     //从请求中取得用户名和密码
-    $user = $_GET['username'];
-    $pw = $_GET['password'];
+    //$user = $_GET['username'];
+    //$pw = $_GET['password'];
 
-    echo $user;
-    exit();
-    $conn->close();
+    echo "hello world";
+
     // include "./03_conn.php";
     // //  1. 检查用户名是否存在
     // $sql = "
