@@ -15,7 +15,7 @@
         //用户名存在，不可用
         echo "不可用";
     } else {
-        echo "可用";
+        header("Location: www.gavinlin9.cluGavin-lin9.github.io/html/login.html");
     }
     $conn->close();
 

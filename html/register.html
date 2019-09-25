@@ -11,9 +11,10 @@
 <body>
   <input type="text" name="username">用户名
   <input type="text" name="password">密码
+  <button type="submit" class="register">注册</button>
 </body>
 <script>
-  document.querySelector('input[name="username"]').onclick = function () {
+  document.querySelector('.register ').onclick = function () {
     //1.取得input的值
     let user = this.value;
     //2.发送ajax，带着用户名
