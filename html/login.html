@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
+  <style>
+    #register {
+      width: 50%;
+      margin-top: 200px;
+    }
+
+    .ok:after {
+      content: "√";
+      color: green;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    .ng::after {
+      content: "×";
+      color: red;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+        特点：
+        1. 会进行页面跳转
+        2. 只能发get和post请求
+     -->
+
+
+  <div class="panel panel-primary center-block" id="register">
+    <div class="panel-heading">
+      <h3 class="panel-title">登陆</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon ">
+            <i class="glyphicon glyphicon-user"></i>
+          </div>
+          <input type="text" name="username" class="form-control" placeholder="请输入用户名">
+          <div class="input-group-addon" id="user-validation">
+            <!-- <i class="glyphicon glyphicon-user"></i> -->
+
+          </div>
+        </div>
+        <br>
+        <div class="input-group">
+          <div class="input-group-addon ">
+            <i class="glyphicon glyphicon-lock"></i>
+          </div>
+          <input type="text" name="password" class="form-control" placeholder="请输入密码">
+        </div>
+        <br>
+        <div class="input-group">
+          <button type="submit" class="btn btn-primary">登陆</button>
+          <a type="button" class="btn btn-link" href="./register.html">注册</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //使用ajax发送登录的post请求
+    document.querySelector('button').onclick = function () {
+      //取得用户名和密码
+      let user = document.querySelector('input[name=username]').value;
+      let password = document.querySelector('input[name=password]').value;
+      //发送ajax
+      //  1. 创建xhr对象
+      let xhr = new XMLHttpRequest();
+
+      //  2. 配置对象
+      xhr.open('POST', '/site1/api/login.php', true)
+
+      //  3. 准备接收响应
+      xhr.onload = function () {
+        if (this.status >= 200 && this.status < 300) {
+          //根据相应，显示错误或者跳转页面
+          // if(登录成功) {
+          //      location.href = '../index.html'
+          // }
+          console.log(this.responseText)
+        } else {
+
+        }
+      }
+
+      //  4. 告诉后端，我们在body中的数据，其格式是什么格式。
+      xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+
+      //  5. send.我们将aaa=bbb&ccc=ddd的格式，叫做form表单格式
+      xhr.send(`username=${user}&password=${password}`); //send的参数，就是请求体中的内容。
+
+      //ajax中，发送post与get的区别：
+      //  1. open的第一个参数
+      //  2. setRequestHeader告知服务器，body的数据格式
+      //  3. send有参数，参数内容，就是请求体的内容。
+    }
+  </script>
+</body>
+
+</html>
