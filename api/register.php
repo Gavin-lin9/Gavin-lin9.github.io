@@ -6,6 +6,7 @@
 
     echo $user;
     exit();
+    $conn->close();
     // include "./03_conn.php";
     // //  1. 检查用户名是否存在
     // $sql = "
