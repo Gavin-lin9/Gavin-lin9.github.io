@@ -1,5 +1,5 @@
 <?php
-    $server_name = 'localhost';
+    $server_name = 'gavinlin9.club';
     $dbms_username = 'root1';
     $dbms_password = 'xx7488366';
     $db_name = 'db1';
