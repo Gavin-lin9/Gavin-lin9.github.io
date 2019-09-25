@@ -20,13 +20,15 @@
     //2.发送ajax，带着用户名
     let xhr = new XMLHttpRequest();
 
-    xhr.open('GET', `/Gavin-lin9.github.io/api/checkuser.php?username=${user}`, true);
+    //`/Gavin-lin9.github.io/api/checkuser.php?username=${user}`
+
+    xhr.open('GET', "../api/ceshi.php", true);
 
     xhr.onload = function () {
       if (this.status >= 200 && this.status < 300) {
         //响应成功,php  echo的内容就是this.responsText
 
-        header("Location: www.gavinlin9.cluGavin-lin9.github.io/html/login.html")
+        console.log('done')
       } else {
         console.log('请求失败')
       }
