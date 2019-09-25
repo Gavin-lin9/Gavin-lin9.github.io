@@ -68,7 +68,7 @@ mac下Apache的默认文件夹为/Library/WebServer/Documents，在该目录下�
 
 
 # 启动MySQL
-1.进入系统偏好设置，点击MySQL。
+31.进入系统偏好设置，点击MySQL。
 2.点击Start MySQL Server
 3.修改root用户的密码
 打开终端，输入命令（将temppassword替换为之前保存的临时密码）：
