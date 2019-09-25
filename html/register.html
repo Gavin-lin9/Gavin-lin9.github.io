@@ -28,6 +28,7 @@
     xhr.onload = function () {
       if (this.status >= 200 && this.status < 300) {
         //响应成功,php  echo的内容就是this.responsText
+        console.log(this.responseText)
 
         //location.href = 'http://www.gavinlin9.club/html/login.html'
         console.log('请求成功')
