@@ -13,7 +13,7 @@
   <input type="text" name="password">密码
 </body>
 <script>
-  document.querySelector('input[name="username"]').onblur = function () {
+  document.querySelector('input[name="username"]').onclick = function () {
     //1.取得input的值
     let user = this.value;
     //2.发送ajax，带着用户名
