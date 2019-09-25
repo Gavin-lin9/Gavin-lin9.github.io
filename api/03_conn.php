@@ -1,6 +1,6 @@
 <?php
     $server_name = 'localhost';
-    $dbms_username = 'root';
+    $dbms_username = 'root1';
     $dbms_password = 'xx7488366';
     $db_name = 'db1';
 
