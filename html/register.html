@@ -16,19 +16,20 @@
 <script>
   document.querySelector('.register ').onclick = function () {
     //1.取得input的值
-    let user = this.value;
+    let user = document.querySelector('input[name="username"]').value;
+    let password = document.querySelector('input[name="password"]').value;
     //2.发送ajax，带着用户名
     let xhr = new XMLHttpRequest();
 
     //`/Gavin-lin9.github.io/api/checkuser.php?username=${user}`
 
-    xhr.open('GET', "../api/ceshi.php", true);
+    xhr.open('GET', `../api/register.php?username=${user}&&password=${password}`, true);
 
     xhr.onload = function () {
       if (this.status >= 200 && this.status < 300) {
         //响应成功,php  echo的内容就是this.responsText
 
-        location.href = 'http://www.gavinlin9.club/html/login.html'
+        //location.href = 'http://www.gavinlin9.club/html/login.html'
       } else {
         console.log('请求失败')
       }

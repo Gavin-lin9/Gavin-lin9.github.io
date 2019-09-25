@@ -26,8 +26,8 @@
         $ret = $conn->query($sql);
         if($ret) {
             //注册成功
-            // echo "注册成功";
-            header("Location: www.gavinlin9.cluGavin-lin9.github.io/html/login.html");
+            echo "注册成功";
+           
         } else {
             //注册失败
             echo "注册失败";
