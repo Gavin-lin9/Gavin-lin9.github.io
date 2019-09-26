@@ -1,0 +1,34 @@
+header {
+  width: 20%;
+  height: 100%;
+  float: left;
+
+}
+
+header>div.logo>h1 {
+  height: 100px;
+  width: 100px;
+}
+
+header>div.logo>h1>img {
+  width: 100%;
+  height: 100%;
+  opacity: .1;
+}
+
+header>div.logo>span {
+  color: #ccc;
+  font-size: 15px
+}
+
+header>ul {
+  width: 100px;
+  margin-top: 200px;
+  font-size: 30px
+}
+
+header>ul>li {
+  height: 30px;
+  width: 100%;
+  line-height: 50px;
+}
