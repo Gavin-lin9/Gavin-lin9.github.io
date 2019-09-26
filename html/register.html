@@ -21,8 +21,6 @@
     //2.发送ajax，带着用户名
     let xhr = new XMLHttpRequest();
 
-    //`/Gavin-lin9.github.io/api/checkuser.php?username=${user}`
-
     xhr.open('GET', `/Gavin-lin9.github.io/api/register.php?username=${user}`, true);
 
     xhr.onload = function () {
